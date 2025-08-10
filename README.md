@@ -10,8 +10,11 @@
     <img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/coding.gif" />
   </picture>
 
-<img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/github-metrics/isocalendar.fullyear.svg" alt="isocalendar.fullyear" />
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/bugwz/bugwz/profile-3d-contrib/profile-night-rainbow.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/bugwz/bugwz/profile-3d-contrib/profile-gitblock.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/bugwz/bugwz/profile-3d-contrib/profile-night-rainbow.svg" />
+</picture>
 
 ![bugwz's GitHub stats](https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&theme=transparent)
 
