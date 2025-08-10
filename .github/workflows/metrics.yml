@@ -43,11 +43,12 @@ jobs:
           plugin_screenshot_selector: "#body-wrap"
           plugin_screenshot_mode: image
           plugin_screenshot_viewport: '{"width": 1280,"height": 600}'
-      - uses: lowlighter/metrics@latest
+      - name: Starred topics
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.topics.icons.svg
           token: NOT_NEEDED
-          base: header, repositories
+          base: ""
           plugin_topics_sort: stars
           plugin_topics: yes
           plugin_topics_limit: 0
