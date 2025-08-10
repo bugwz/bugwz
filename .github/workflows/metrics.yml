@@ -20,15 +20,6 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
       - uses: lowlighter/metrics@latest
         with:
-          filename: metrics.plugin.topics.icons.svg
-          token: NOT_NEEDED
-          base: header, repositories
-          plugin_topics_sort: stars
-          plugin_topics: yes
-          plugin_topics_limit: 0
-          plugin_topics_mode: icons
-      - uses: lowlighter/metrics@latest
-        with:
           filename: metrics.plugin.pagespeed.svg
           token: NOT_NEEDED
           base: ""
@@ -38,3 +29,12 @@ jobs:
           plugin_pagespeed_detailed: false
           plugin_pagespeed_screenshot: false
           plugin_pagespeed_pwa: false
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.topics.icons.svg
+          token: NOT_NEEDED
+          base: header, repositories
+          plugin_topics_sort: stars
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
