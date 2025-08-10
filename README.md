@@ -2,4 +2,6 @@
 
 ![bugwz's GitHub stats](https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&theme=transparent)
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=bugwz)](https://github.com/ryo-ma/github-profile-trophy)
+[![bugwz](https://github-profile-trophy.vercel.app/?username=bugwz)](https://github.com/ryo-ma/github-profile-trophy)
+
+[![bugwz's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=bugwz)](https://github.com/ashutosh00710/github-readme-activity-graph)
