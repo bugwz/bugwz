@@ -4,4 +4,4 @@
 
 [![bugwz](https://github-profile-trophy.vercel.app/?username=bugwz)](https://github.com/ryo-ma/github-profile-trophy)
 
-[![bugwz's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=bugwz &theme=minimal)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![bugwz's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=bugwz&theme=minimal)](https://github.com/ashutosh00710/github-readme-activity-graph)
