@@ -13,8 +13,10 @@ jobs:
       contents: write
     steps:
       - name: Use the output variable
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
-          echo "Received variable: ${{ METRICS_TOKEN2 }}"
+          echo "Received variable: ${{ GH_TOKEN }}"
       # - uses: lowlighter/metrics@latest
       #   with:
       #     output_action: commit
