@@ -46,6 +46,7 @@ jobs:
           token: NOT_NEEDED
           base: ""
           plugin_screenshot: yes
-          plugin_screenshot_title: XKCD of the day
+          plugin_screenshot_title: https://bugwz.com
           plugin_screenshot_url: https://bugwz.com
-          plugin_screenshot_selector: "#comic img"
+          plugin_screenshot_selector: "#body-wrap"
+          plugin_screenshot_mode: image
