@@ -9,9 +9,9 @@
 
 <hr width="100%" height="1" />
 
-<div align="center">
+<div>
 <img align="left" width="48%" src="./metrics.plugin.pagespeed.svg" />
-<img align="left" width="46%" src="./metrics.plugin.topics.icons.svg" />
+<img align="center" width="46%" src="./metrics.plugin.topics.icons.svg" />
 </div>
 
 <!--
