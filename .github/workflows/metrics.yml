@@ -22,7 +22,7 @@ jobs:
         with:
           filename: metrics.plugin.topics.icons.svg
           token: NOT_NEEDED
-          base: ""
+          base: header, repositories
           plugin_topics_sort: stars
           plugin_topics: yes
           plugin_topics_limit: 0
