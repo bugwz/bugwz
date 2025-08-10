@@ -4,6 +4,8 @@
 
 ![bugwz's GitHub stats](https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&theme=transparent)
 
+<img src="https://github-profile-trophy.vercel.app/?username=bugwz&theme=gruvbox&row=1&column=7&no-frame=true&no-bg=true" /><br>
+
 <!--
 <p align="center" >
 	<picture>
