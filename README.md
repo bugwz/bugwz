@@ -7,7 +7,7 @@
 <div>
 <img align="left" width="48%" src="https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true" />
 
-<img align="right" width="50%" src="https://metrics.lecoq.io/bugwz?template=classic&base.repositories=0&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&config.timezone=Asia%2FShanghai"></img>
+<img align="right" width="50%" src="./github-metrics.svg"></img>
 
 </div>
 
