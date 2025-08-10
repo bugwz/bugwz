@@ -1,4 +1,4 @@
-<div align="center"><font size="30">Hi 👋, I'm bugwz 👨‍💻</font></div>
+<h1 align="center">Hi 👋, I'm bugwz 👨‍💻</h1>
 
 <img align="center" width="100%" height="400" src="./mario.gif" />
 
