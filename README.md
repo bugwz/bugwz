@@ -7,8 +7,9 @@
 <img align="right" width="46%" src="./github-metrics.svg" />
 </div>
 
-<img align="center" width="100%" src="./metrics.plugin.pagespeed.svg" />
-
+<div>
+<img align="left" width="48%" src="./metrics.plugin.pagespeed.svg" />
+</div>
 
 <!--
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Hello%2C%20World&center=true&size=27)](https://git.io/typing-svg)
