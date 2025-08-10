@@ -12,7 +12,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: User Metrics
+        uses: lowlighter/metrics@latest
         with:
           filename: github-metrics.svg
           base: header, repositories
@@ -30,15 +31,6 @@ jobs:
           plugin_pagespeed_detailed: false
           plugin_pagespeed_screenshot: false
           plugin_pagespeed_pwa: false
-      - uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.plugin.topics.icons.svg
-          token: NOT_NEEDED
-          base: header, repositories
-          plugin_topics_sort: stars
-          plugin_topics: yes
-          plugin_topics_limit: 0
-          plugin_topics_mode: icons
       - name: Website screenshot
         uses: lowlighter/metrics@latest
         with:
@@ -50,3 +42,12 @@ jobs:
           plugin_screenshot_url: https://bugwz.com
           plugin_screenshot_selector: "#body-wrap"
           plugin_screenshot_mode: image
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.topics.icons.svg
+          token: NOT_NEEDED
+          base: header, repositories
+          plugin_topics_sort: stars
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
