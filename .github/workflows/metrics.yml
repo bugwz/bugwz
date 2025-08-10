@@ -31,6 +31,28 @@ jobs:
           plugin_pagespeed_detailed: false
           plugin_pagespeed_screenshot: false
           plugin_pagespeed_pwa: false
+      - name: Starred topics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.topics.icons.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_topics_sort: stars
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
+      - name: Star lists
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.starlists.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_starlists: yes
+          plugin_starlists_limit: 2
+          plugin_starlists_limit_repositories: 2
+          plugin_starlists_languages: ture
+          plugin_starlists_limit_languages: 8
+          plugin_starlists_only: Awesome
       - name: Website screenshot
         uses: lowlighter/metrics@latest
         with:
@@ -43,13 +65,3 @@ jobs:
           plugin_screenshot_selector: "#body-wrap"
           plugin_screenshot_mode: image
           plugin_screenshot_viewport: '{"width": 1280,"height": 600}'
-      - name: Starred topics
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.plugin.topics.icons.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_topics_sort: stars
-          plugin_topics: yes
-          plugin_topics_limit: 0
-          plugin_topics_mode: icons
