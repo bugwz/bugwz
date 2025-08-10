@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Use the output variable
         run: |
-          echo "Received variable: ${{ secrets.GITHUB_TOKEN }}"
+          echo "Received variable: ${{ secrets.METRICS_TOKEN }}"
       # - uses: lowlighter/metrics@latest
       #   with:
       #     output_action: commit
