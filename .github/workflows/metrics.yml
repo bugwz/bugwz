@@ -19,7 +19,4 @@ jobs:
       #     echo "Received variable: ${{ secrets.METRICS_TOKEN }}"
       - uses: lowlighter/metrics@latest
         with:
-          output_action: commit
-          committer_branch: metrics-renders
-          committer_message: "chore: update metrics"
           token: ${{ secrets.METRICS_TOKEN }}
