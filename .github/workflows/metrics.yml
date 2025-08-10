@@ -12,11 +12,9 @@ jobs:
     permissions:
       contents: write
     steps:
-      # - name: Use the output variable
-      #   env:
-      #     GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
-      #   run: |
-      #     echo "Received variable: ${{ secrets.METRICS_TOKEN }}"
       - uses: lowlighter/metrics@latest
         with:
+          filename: github-metrics.svg
+          base: header, repositories
+          plugin_lines: yes
           token: ${{ secrets.METRICS_TOKEN }}
