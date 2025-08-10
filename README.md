@@ -11,7 +11,7 @@
 
 <div>
 <img align="left" width="48%" src="./metrics.plugin.pagespeed.svg" />
-<img align="center" width="46%" src="./metrics.plugin.topics.icons.svg" />
+<img align="right" width="46%" src="./metrics.plugin.topics.icons.svg" />
 </div>
 
 <!--
