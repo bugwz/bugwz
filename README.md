@@ -1,8 +1,18 @@
+<h1 align="center">Hi 👋, I'm bugwz 👨‍💻</h1>
+
+# ![Mario_Gameplay](https://github.com/erbanku/erbanku/assets/79493862/56f4be91-dcd4-4700-838d-5545ccdbf859)
+
 <div align="center">
-  
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Hello%2C%20World&center=true&size=27)](https://git.io/typing-svg)
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&theme=transparent)
+
+</div>
+
+
+<!--
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Hello%2C%20World&center=true&size=27)](https://git.io/typing-svg)
+-->
+
 
 
 <!--
@@ -17,4 +27,3 @@
 </p>
 -->
 
-</div>
