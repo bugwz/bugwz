@@ -4,6 +4,11 @@
 
 ![](./profile-3d-contrib/profile-gitblock.svg)
 
+![bugwz's GitHub stats](https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&theme=transparent)
+
+![bugwz's GitHub stats](https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&theme=transparent)
+
+<!--
 <p align="center" >
 	<picture>
 	  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/bugwz/bugwz/output-3d-contrib/night.svg" />
@@ -11,14 +16,6 @@
 	  <img alt="github profile contributions chart"    src="https://raw.githubusercontent.com/bugwz/bugwz/output-3d-contrib/day.svg" />
 	</picture>
 </p>
+-->
 
 </div>
-
-
-
-<div align="left">
-  
-![bugwz's GitHub stats](https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&theme=transparent)
-
-
-[![bugwz](https://github-profile-trophy.vercel.app/?username=bugwz)](https://github.com/ryo-ma/github-profile-trophy)
