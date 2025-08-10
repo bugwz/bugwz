@@ -7,7 +7,7 @@
 <img align="right" width="46%" src="./github-metrics.svg" />
 </div>
 
-<img align="center" width="100%" src="./metrics.plugin.topics.icons.svg" />
+<img align="center" width="100%" src="./metrics.plugin.pagespeed.svg" />
 
 
 <!--
