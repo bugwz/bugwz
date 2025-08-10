@@ -42,6 +42,7 @@ jobs:
           plugin_screenshot_url: https://bugwz.com
           plugin_screenshot_selector: "#body-wrap"
           plugin_screenshot_mode: image
+          plugin_screenshot_viewport: '{"width": 1280,"height": 600}'
       - uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.topics.icons.svg
