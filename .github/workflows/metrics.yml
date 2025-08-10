@@ -18,7 +18,8 @@ jobs:
           base: header, repositories
           plugin_lines: yes
           token: ${{ secrets.METRICS_TOKEN }}
-      - uses: lowlighter/metrics@latest
+      - name: Google PageSpeed
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.pagespeed.svg
           token: NOT_NEEDED
@@ -38,3 +39,13 @@ jobs:
           plugin_topics: yes
           plugin_topics_limit: 0
           plugin_topics_mode: icons
+      - name: Website screenshot
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.screenshot.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_screenshot: yes
+          plugin_screenshot_title: XKCD of the day
+          plugin_screenshot_url: https://xkcd.com
+          plugin_screenshot_selector: "#comic img"
