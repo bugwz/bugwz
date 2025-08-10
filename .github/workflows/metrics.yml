@@ -16,7 +16,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
-          echo "Received variable: $GH_TOKEN"
+          echo "Received variable: ${{ secrets.METRICS_TOKEN3 }}"
       # - uses: lowlighter/metrics@latest
       #   with:
       #     output_action: commit
