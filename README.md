@@ -3,8 +3,8 @@
 <img align="center" width="100%" height="400" src="./mario.gif" />
 
 <table>
-<img align="left" max-width="480" src="https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true" />
-<img align="left" max-width="480" src="./github-metrics.svg" />
+<img align="left" max-width="450" src="https://github-readme-stats.vercel.app/api?username=bugwz&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true" />
+<img align="left" max-width="450" src="./github-metrics.svg" />
 <tr><td></td></tr>
 <!-- <br /><br /><br /><br /><br /><br /><br /> -->
 </table>
