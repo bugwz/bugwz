@@ -7,7 +7,7 @@
 
 <img align="right" width="400" src="./github-metrics.svg" />
 
-<img align="left" width="400" src="./metrics.plugin.pagespeed.svg" />
+<img align="center" width="450" src="./metrics.plugin.pagespeed.svg" />
 
 
 <!--
