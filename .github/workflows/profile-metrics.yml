@@ -2,18 +2,20 @@ name: Generate Profile Metrics
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "15 0 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
+    paths:
+      - .github/workflows/profile-metrics.yml
 
 permissions:
   contents: write
 
 concurrency:
-  group: generate-profile-metrics
-  cancel-in-progress: true
+  group: profile-assets-release
+  cancel-in-progress: false
 
 jobs:
   generate-profile-metrics:
@@ -23,7 +25,8 @@ jobs:
       - name: Generate profile overview
         uses: lowlighter/metrics@latest
         with:
-          filename: assets/profile-metrics/github-metrics.svg
+          filename: github-metrics.svg
+          output_action: none
           base: header, repositories
           plugin_lines: yes
           token: ${{ secrets.METRICS_TOKEN }}
@@ -31,7 +34,8 @@ jobs:
       - name: Generate PageSpeed report
         uses: lowlighter/metrics@latest
         with:
-          filename: assets/profile-metrics/metrics.plugin.pagespeed.svg
+          filename: metrics.plugin.pagespeed.svg
+          output_action: none
           token: NOT_NEEDED
           base: ""
           plugin_pagespeed: yes
@@ -44,7 +48,8 @@ jobs:
       - name: Generate starred topics
         uses: lowlighter/metrics@latest
         with:
-          filename: assets/profile-metrics/metrics.plugin.topics.icons.svg
+          filename: metrics.plugin.topics.icons.svg
+          output_action: none
           token: NOT_NEEDED
           base: ""
           plugin_topics_sort: stars
@@ -55,7 +60,8 @@ jobs:
       - name: Generate star lists
         uses: lowlighter/metrics@latest
         with:
-          filename: assets/profile-metrics/metrics.plugin.starlists.svg
+          filename: metrics.plugin.starlists.svg
+          output_action: none
           token: NOT_NEEDED
           base: ""
           plugin_starlists: yes
@@ -67,7 +73,8 @@ jobs:
       - name: Generate website screenshot
         uses: lowlighter/metrics@latest
         with:
-          filename: assets/profile-metrics/metrics.plugin.screenshot.svg
+          filename: metrics.plugin.screenshot.svg
+          output_action: none
           token: NOT_NEEDED
           base: ""
           plugin_screenshot: yes
@@ -76,3 +83,28 @@ jobs:
           plugin_screenshot_selector: "#body-wrap"
           plugin_screenshot_mode: image
           plugin_screenshot_viewport: '{"width": 1280,"height": 600}'
+
+      - name: Ensure profile assets release exists
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release view profile-assets >/dev/null 2>&1 || \
+            gh release create profile-assets \
+              --target "${GITHUB_SHA}" \
+              --title "Profile Assets" \
+              --notes "Automatically generated profile assets." \
+              --latest=false
+
+      - name: Publish profile metrics
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload profile-assets \
+            /metrics_renders/github-metrics.svg \
+            /metrics_renders/metrics.plugin.pagespeed.svg \
+            /metrics_renders/metrics.plugin.topics.icons.svg \
+            /metrics_renders/metrics.plugin.starlists.svg \
+            /metrics_renders/metrics.plugin.screenshot.svg \
+            --clobber
