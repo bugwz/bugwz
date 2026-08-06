@@ -31,20 +31,6 @@ jobs:
           plugin_lines: yes
           token: ${{ secrets.METRICS_TOKEN }}
 
-      - name: Generate PageSpeed report
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.plugin.pagespeed.svg
-          output_action: none
-          token: NOT_NEEDED
-          base: ""
-          plugin_pagespeed: yes
-          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
-          plugin_pagespeed_url: https://bugwz.com
-          plugin_pagespeed_detailed: false
-          plugin_pagespeed_screenshot: false
-          plugin_pagespeed_pwa: false
-
       - name: Generate starred topics
         uses: lowlighter/metrics@latest
         with:

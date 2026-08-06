@@ -1,0 +1,50 @@
+name: Generate PageSpeed Metrics
+
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/pagespeed.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: workflow-pagespeed
+  cancel-in-progress: true
+
+jobs:
+  generate-pagespeed:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate PageSpeed report
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.pagespeed.svg
+          output_action: none
+          token: NOT_NEEDED
+          base: ""
+          plugin_pagespeed: yes
+          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
+          plugin_pagespeed_url: https://bugwz.com
+          plugin_pagespeed_detailed: false
+          plugin_pagespeed_screenshot: false
+          plugin_pagespeed_pwa: false
+
+      - name: Stage PageSpeed metrics
+        run: |
+          mkdir -p dist
+          cp /metrics_renders/metrics.plugin.pagespeed.svg dist/
+
+      - name: Publish PageSpeed metrics
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: workflow-pagespeed
+          publish_dir: ./dist
+          force_orphan: true

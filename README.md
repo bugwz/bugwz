@@ -8,4 +8,4 @@
 
 <img align="right" width="400" src="https://raw.githubusercontent.com/bugwz/bugwz/workflow-profile-metrics/github-metrics.svg" />
 
-<img align="center" width="450" src="https://raw.githubusercontent.com/bugwz/bugwz/workflow-profile-metrics/metrics.plugin.pagespeed.svg" />
+<img align="center" width="450" src="https://raw.githubusercontent.com/bugwz/bugwz/workflow-pagespeed/metrics.plugin.pagespeed.svg" />
