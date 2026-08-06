@@ -14,8 +14,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-assets-release
-  cancel-in-progress: false
+  group: workflow-readme-stats
+  cancel-in-progress: true
 
 jobs:
   generate-readme-stats:
@@ -27,24 +27,14 @@ jobs:
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true
-          path: stats.svg
+          path: dist/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Ensure profile assets release exists
-        env:
-          GH_REPO: ${{ github.repository }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release view profile-assets >/dev/null 2>&1 || \
-            gh release create profile-assets \
-              --target "${GITHUB_SHA}" \
-              --title "Profile Assets" \
-              --notes "Automatically generated profile assets." \
-              --latest=false
-
       - name: Publish stats card
-        env:
-          GH_REPO: ${{ github.repository }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload profile-assets stats.svg --clobber
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: workflow-readme-stats
+          publish_dir: ./dist
+          force_orphan: true

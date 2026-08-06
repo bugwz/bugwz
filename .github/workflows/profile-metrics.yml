@@ -14,8 +14,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-assets-release
-  cancel-in-progress: false
+  group: workflow-profile-metrics
+  cancel-in-progress: true
 
 jobs:
   generate-profile-metrics:
@@ -84,27 +84,15 @@ jobs:
           plugin_screenshot_mode: image
           plugin_screenshot_viewport: '{"width": 1280,"height": 600}'
 
-      - name: Ensure profile assets release exists
-        env:
-          GH_REPO: ${{ github.repository }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Stage profile metrics
         run: |
-          gh release view profile-assets >/dev/null 2>&1 || \
-            gh release create profile-assets \
-              --target "${GITHUB_SHA}" \
-              --title "Profile Assets" \
-              --notes "Automatically generated profile assets." \
-              --latest=false
+          mkdir -p dist
+          cp /metrics_renders/*.svg dist/
 
       - name: Publish profile metrics
-        env:
-          GH_REPO: ${{ github.repository }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release upload profile-assets \
-            /metrics_renders/github-metrics.svg \
-            /metrics_renders/metrics.plugin.pagespeed.svg \
-            /metrics_renders/metrics.plugin.topics.icons.svg \
-            /metrics_renders/metrics.plugin.starlists.svg \
-            /metrics_renders/metrics.plugin.screenshot.svg \
-            --clobber
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: workflow-profile-metrics
+          publish_dir: ./dist
+          force_orphan: true
