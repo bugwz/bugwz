@@ -7,7 +7,7 @@ on:
     paths:
       - .github/workflows/readme-stats.yml
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "37 22 * * *"
   workflow_dispatch:
 
 permissions:
