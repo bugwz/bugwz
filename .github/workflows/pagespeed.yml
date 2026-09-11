@@ -29,6 +29,9 @@ jobs:
           output_action: none
           token: NOT_NEEDED
           base: ""
+          plugins_errors_fatal: yes
+          retries: 3
+          retries_delay: 60
           plugin_pagespeed: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
           plugin_pagespeed_url: https://bugwz.com
